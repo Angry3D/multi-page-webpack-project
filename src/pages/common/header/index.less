@@ -1,0 +1,36 @@
+@import '@/assets/variable.less';
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eaecef;
+    height: 50px;
+    padding: 0 20px;
+    .logo-box {
+        display: flex;
+        align-items: center;
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .tab-box {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        .split {
+            width: 1px;
+            height: 10px;
+            background-color: #333;
+            margin: 0 10px;
+        }
+        a.active {
+            color: @primary-color;
+        }
+    }
+}
