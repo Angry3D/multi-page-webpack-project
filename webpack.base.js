@@ -92,8 +92,7 @@ module.exports = {
     ...getHtmlPlugin(), // 应用所有页面模板
     new MiniCssExtractPlugin({
       // 打包 css 代码到文件中
-      filename: 'css/[name].[fullhash:5].css',
-      chunkFilename: 'css/common.[fullhash:5].css' // 针对公共样式的文件名
+      filename: 'css/[name].[fullhash:5].css'
     })
   ]
 }
