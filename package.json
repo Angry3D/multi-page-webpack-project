@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "preview": "live-server dist/",
-    "deploy": "gh-pages -d dist"
+    "deploy:github": "cross-env PUBLIC_PATH=/multi-page-webpack-project/ webpack --config webpack.prod.js && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "compression-webpack-plugin": "^10.0.0",
     "copy-webpack-plugin": "^6.4.1",
     "core-js": "^3.25.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^5.5.0",

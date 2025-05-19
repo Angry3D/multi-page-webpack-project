@@ -33,7 +33,7 @@ module.exports = {
     clean: true,
     path: path.resolve(__dirname, 'dist'), // 输出目录为 dist
     filename: 'js/[name].[chunkhash:5].js', // js 输出到 dist/js/xxx
-    publicPath: './' // 公用的公共路径
+    publicPath: process.env.PUBLIC_PATH ||'/' // 公用的公共路径
   },
   resolve: {
     alias: {
