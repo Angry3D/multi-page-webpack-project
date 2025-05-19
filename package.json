@@ -1,6 +1,6 @@
 {
   "name": "multi-page-webpack-project",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "前端多页面webpack工程，用于需要SEO的多页面网站建设",
   "main": "index.js",
   "scripts": {
