@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "preview": "live-server dist/"
+    "preview": "live-server dist/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/Angry3D/multi-page-webpack-project#readme",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "jquery": "^3.6.1"
   },
   "devDependencies": {
