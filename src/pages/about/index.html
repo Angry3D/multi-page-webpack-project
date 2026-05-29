@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <!-- 引入公共页头 -->
-    <%= require("html-loader!../common/header/index.html") %>
-    <div class="content">
-        This is About
-    </div>
-    <!-- 引入公共页尾 -->
-    <%= require("html-loader!../common/footer/index.html") %>
-</body>
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <%= require("html-loader!../common/head/index.html") %>
+        <meta
+            name="description"
+            content="了解多页面 SEO 前端模板的项目定位、Webpack 5 构建能力和页面复用方式。"
+        />
+        <meta name="keywords" content="Webpack 5, 多页面工程, SEO 模板, 公共组件, 前端构建" />
+        <meta property="og:title" content="关于多页面 SEO 前端模板" />
+        <meta
+            property="og:description"
+            content="介绍 Webpack 5 多页面 SEO 前端模板的构建能力和页面结构。"
+        />
+        <title>关于多页面 SEO 前端模板</title>
+    </head>
+    <body>
+        <!-- 引入公共页头 -->
+        <%= require("html-loader!../common/header/index.html") %>
+        <div class="content">This is About</div>
+        <!-- 引入公共页尾 -->
+        <%= require("html-loader!../common/footer/index.html") %>
+    </body>
 </html>

@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <!-- 引入公共页头 -->
-    <%= require("html-loader!../common/header/index.html") %>
-    <div class="content">
-        This is Home
-    </div>
-    <!-- 引入公共页尾 -->
-    <%= require("html-loader!../common/footer/index.html") %>
-</body>
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <%= require("html-loader!../common/head/index.html") %>
+        <meta
+            name="description"
+            content="多页面 SEO 前端模板首页，展示基于 Webpack 5 的多页面构建、公共片段复用和静态资源处理能力。"
+        />
+        <meta name="keywords" content="Webpack 5, 多页面, SEO, 前端模板, HTML 模板" />
+        <meta property="og:title" content="多页面 SEO 前端模板首页" />
+        <meta property="og:description" content="基于 Webpack 5 的多页面 SEO 前端模板首页。" />
+        <title>多页面 SEO 前端模板首页</title>
+    </head>
+    <body>
+        <!-- 引入公共页头 -->
+        <%= require("html-loader!../common/header/index.html") %>
+        <div class="content">This is Home</div>
+        <!-- 引入公共页尾 -->
+        <%= require("html-loader!../common/footer/index.html") %>
+    </body>
 </html>
