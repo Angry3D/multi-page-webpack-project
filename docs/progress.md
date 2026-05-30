@@ -37,20 +37,7 @@ idle
 
 ## 验证
 
-- TODO-0018 已归档到 `docs/archive/2026-05-29-dev-css-source-map.md`。
-- TODO-0016 已归档到 `docs/archive/2026-05-29-remove-jquery.md`。
-- TODO-0022 已归档到 `docs/archive/2026-05-29-readme-add-page-guide.md`。
-- TODO-0019 已归档到 `docs/archive/2026-05-29-lint-format-baseline.md`。
-- TODO-0020 已归档到 `docs/archive/2026-05-29-auto-page-registration.md`。
-- TODO-0021 已归档到 `docs/archive/2026-05-29-configurable-github-public-path.md`。
-- `node -e "console.log(JSON.stringify(require('./pages'), null, 2))"` 已确认当前自动发现 `index` 和 `about`，输出名保持 `index.html` 和 `about.html`。
-- `pnpm run lint` 已通过。
-- `pnpm run format:check` 已通过。
-- `pnpm run build:github` 已通过，默认 `PUBLIC_PATH=/multi-page-webpack-project/`。
-- `PUBLIC_PATH=custom-path pnpm run build:github` 已通过，并规范化为 `PUBLIC_PATH=/custom-path/`。
-- `pnpm exec webpack --config webpack.dev.js` 已通过。
-- `pnpm run build` 已通过。
-- 浏览器验证已通过：首页和关于页导航 active 状态与 `aria-current="page"` 正常。
+暂无。已完成阶段见 `docs/archive/README.md`。
 
 ## 下一步
 

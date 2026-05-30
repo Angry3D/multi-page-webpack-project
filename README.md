@@ -9,49 +9,19 @@
 
 ## 常用命令
 
-1. 安装依赖
-
 ```bash
-pnpm install
+pnpm install        # 安装依赖
+pnpm run dev       # 开发运行
+pnpm run build     # 生产构建
+pnpm run preview   # 预览 dist/
+pnpm run lint      # 代码检查
+pnpm run format    # 格式化
+pnpm run format:check  # 格式检查
 ```
 
-2. 开发运行
+当前项目尚未配置自动化测试。
 
-```bash
-pnpm run dev
-```
-
-3. 打包构建
-
-```bash
-pnpm run build
-```
-
-4. 针对打包构建的结果进行预览
-
-```bash
-pnpm run preview
-```
-
-5. 代码检查
-
-```bash
-pnpm run lint
-```
-
-6. 格式检查
-
-```bash
-pnpm run format:check
-```
-
-7. 格式化
-
-```bash
-pnpm run format
-```
-
-8. GitHub Pages 构建
+GitHub Pages 构建：
 
 ```bash
 pnpm run build:github
@@ -63,7 +33,7 @@ pnpm run build:github
 PUBLIC_PATH=/custom-path/ pnpm run build:github
 ```
 
-9. 部署到 GitHub Pages
+部署到 GitHub Pages：
 
 ```bash
 pnpm run deploy:github
@@ -73,10 +43,24 @@ pnpm run deploy:github
 
 ## 特点
 
-- 基于 `webpack5`，享受 `webpack5` 带来的 **构建效率提升** 和 **构建结果优化**
-- 放弃 `webpack4` 的旧 `loaders` 和 `plugins`，采用 `webpack5` 内置的模块代替，配置文件更加优雅
-- 内置常见多页面的 `webpack` 配置，让开发者更专注于业务开发，包括但不限于：分包策略、js 降级、代码压缩等
-- 仿照 vue 的项目结构，支持类似 vue 的组件复用方式（如示例中的 `header` 和 `footer`），让 vue 开发者快速上手
+- 基于 Webpack 5 的多页面构建模板，每个页面输出独立 HTML。
+- `pages.js` 自动扫描 `src/pages/`，新增页面不需要手动登记页面表。
+- 页面模板支持独立的 title、description、keywords、robots 和 Open Graph 元信息。
+- 公共 head、header 和 footer 片段位于 `src/pages/common/`，适合复用多页面公共结构。
+- 已内置 ESLint、Prettier、生产构建、预览和 GitHub Pages 构建脚本。
+
+## AI 协作说明
+
+当前项目已经开始使用 AI 协作做后续优化。让 AI 续作时，请从 `AGENTS.md` 开始；稳定项目事实在 `docs/project-facts.md`，当前阶段在 `docs/progress.md`，未完成或仍需决策的事项在 `docs/backlog.md`，历史归档在 `docs/archive/`。
+
+续作注意事项：
+
+- 项目以 pnpm 为官方包管理器，不要随意改用 npm 或 yarn。
+- 推荐使用 Node.js 20，仓库提供 `.nvmrc`。
+- 不要把缺少 `node_modules` 误判为源码或构建配置错误。
+- 当前页面由 `pages.js` 自动扫描 `src/pages/` 生成，新增页面不需要手动登记页面表。
+- `dist/` 是构建产物，排查源码问题时优先看 `src/`、`pages.js` 和 Webpack 配置。
+- `docs/backlog.md` 只保留当前未完成或仍需决策的事项；已完成阶段登记到 `docs/archive/README.md`。
 
 ## 目录结构
 
@@ -179,9 +163,3 @@ import '../common/footer'
 pnpm run dev
 pnpm run build
 ```
-
-## TODO
-
-待处理清单
-
-- [ ] 控制台美化

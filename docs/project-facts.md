@@ -23,6 +23,7 @@
 - 项目当前不再引入 jQuery。
 - 项目使用 ESLint flat config 做 JS lint。
 - 项目使用 Prettier 做格式化。
+- `docs/backlog.md` 只保留未完成或仍需决策的当前事项，已归档事项登记到 `docs/archive/README.md`。
 - 项目目前没有自动化测试。
 
 ## 推断事实
@@ -108,6 +109,12 @@
 - `scripts/build-github-pages.js`
   GitHub Pages 构建脚本。默认 public path 根据 `package.json#name` 生成为 `/<name>/`，也可以通过 `PUBLIC_PATH` 环境变量覆盖。
 
+- `docs/backlog.md`
+  当前待办资源池。只保留未完成或仍需决策的事项，并记录下一个待办 ID。
+
+- `docs/archive/README.md`
+  已完成阶段的归档索引和归档模板。
+
 - `webpack.base.js`
   JS rule 使用 `babel-loader` 处理项目 JS，并排除 `node_modules`。
 
@@ -187,5 +194,6 @@ scripts/
 - 项目当前不再引入 jQuery。
 - 项目使用 ESLint flat config 做 JS lint。
 - 项目使用 Prettier 做格式化。
+- `docs/backlog.md` 只保留当前未完成或仍需决策的事项。
 - 项目目前没有自动化测试。
 - 当前 HTML 模板使用 `lang="zh-CN"`。
